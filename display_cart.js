@@ -157,7 +157,7 @@ footerRow.appendChild(removeAllItemsButtonCell);
 
         });
         
-        // Set the initial button text based on the initial quantity
+
         if (itemInCart.quantity > 1) {
             removeAllButton.textContent = 'Remove All';
         } else {

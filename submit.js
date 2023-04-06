@@ -204,12 +204,12 @@ function displayConfirmation(confirmation) {
     submitButton.disabled = true;
 
     if (localStorage.getItem('cart')) {
-        localStorage.setItem('cart', JSON.stringify([])); // Clear local storage after purchase
+        localStorage.setItem('cart', JSON.stringify([])); 
     }
 
     var mainContainer2 = document.querySelector('.main-container-2');
 
-    const continueButton = document.createElement('button') // Continue shopping button
+    const continueButton = document.createElement('button') 
     continueButton.setAttribute("class", "continueButton");
     continueButton.textContent = "Fortsätt handla";
     continueButton.onclick = () => location.href = "index.html";
