@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     purchaseButton.addEventListener('click', () => {
         
         window.location.href = 'order.html';
-        //displayConfirmation();
+       
     });
     
     
@@ -51,7 +51,7 @@ removeAllItemsButton.style.backgroundColor = 'red';
 removeAllItemsButton.style.color = 'white';
 removeAllItemsButton.addEventListener('click', () => {
     localStorage.removeItem('cart');
-    cartContainer.innerHTML = ''; // Clear the cart container
+    cartContainer.innerHTML = ''; 
 });
 
 
@@ -60,7 +60,7 @@ removeAllItemsButton.addEventListener('click', () => {
 const removeAllItemsButtonCell = document.createElement('td');
 removeAllItemsButtonCell.colSpan = 2;
 
-removeAllItemsButtonCell.appendChild(removeAllItemsButton); // Add this line
+removeAllItemsButtonCell.appendChild(removeAllItemsButton); 
 footerRow.appendChild(removeAllItemsButtonCell);
 
     const table = document.createElement('table');
@@ -146,8 +146,7 @@ footerRow.appendChild(removeAllItemsButtonCell);
                 itemInCart.quantity = parseInt(quantityInput.value);
                 itemInCart.total = itemInCart.item.price * itemInCart.quantity;
                 itemPriceCell.textContent = `$${itemInCart.total}`;
-        
-                // Update the Remove All button text based on the quantity
+       
                 if (itemInCart.quantity > 1) {
                     removeAllButton.textContent = 'Remove All';
                 } else {

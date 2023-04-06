@@ -140,11 +140,11 @@ function submitOrder(event) {
         city: document.getElementById('contact-city').value
     };
 
-    // Tömmer orderContainer.
+
     var orderContainer = document.querySelector('.order-container');
     orderContainer.innerHTML = '';
 
-    // Simulerat serversvar. Triggar displayConfirmation
+
     setTimeout(function() {
         displayConfirmation(userInfo);
     }, 1000);
@@ -169,10 +169,9 @@ function displayConfirmation(confirmation) {
     var formContainer = document.getElementById('order-form');
     var submitButton = document.getElementById('form-submitbtn');
 
-    // Hide the form.
     formContainer.style.display = 'none';
 
-    // Create a new div with order details.
+
     var orderDetails = document.createElement('div');
     orderDetails.classList.add('order-info');
     orderDetails.innerHTML = `
@@ -188,10 +187,10 @@ function displayConfirmation(confirmation) {
       </ul>
     `;
 
-    // Add orderDetails to orderContainer.
+
     orderContainer.appendChild(orderDetails);
 
-    // Create a list with cart items.
+
     const cartSummary = getCartSummary();
 
     let itemList = '<ul>';
