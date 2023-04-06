@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>[webshopName] - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>[webshopName]</h1>
+        <nav>
+            <ul>
+                
+                <li><a href="index.html" id="products-button">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <main>
+            <div class="main-container-2">
+                
+                <div class="order-container">
+                    <!-- Item -->
+                </div>
+                
+                <div class="order-container2">
+                    
+                </div>
+
+           
+                
+
+                <form class="form-container" id="order-form">
+                    <div class="input-group">
+                        <label>Name:</label>
+                        <input type="text" placeholder="Fullständigt namn" id="contact-name" onkeyup="validateName()">
+                        <span id="name-error"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Phone Number:</label>
+                        <input type="text" placeholder="Telefonnummer" id="contact-phone" onkeyup="validatePhone()">
+                        <span id="phone-error"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Email adress:</label>
+                        <input type="text" placeholder="E-postadress" id="contact-email" onkeyup="validateEmail()">
+                        <span id="email-error"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Adress:</label>
+                        <input type="text" placeholder="Gatuadress ink gatunummer" id="contact-address" onkeyup="validateAddress()">
+                        <span id="address-error"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Postal code:</label>
+                        <input type="text" placeholder="Postnummer, format 000 00" id="contact-postal-code" onkeyup="validatePostalCode()">
+                        <span id="postal-code-error"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>City:</label>
+                        <input type="text" placeholder="Ort" id="contact-city" onkeyup="validateCity()">
+                        <span id="city-error"></span>
+                    </div>
+                    <span id="submit-error"></span>
+                    <input type="submit" name="submit" id="form-submitbtn" value="Confirm">
+                </form>
+            </div>
+
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2023 - [webshopName]</p>
+    </footer>
+    <script src="fetch_products.js"></script>
+    <script src="fetchAll_products.js"></script>
+    <script src="buyButton.js"></script>
+    <script src="submit.js"></script>
+    <script src="display_cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            getItem();
+        });
+    </script>
+</body>
+
+</html>

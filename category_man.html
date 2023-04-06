@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>[webshopName] - Men's </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>[webshopName]</h1>
+        <nav>
+            <ul>
+                
+                <li><a href="products.html" id="products-button">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"> Shopping Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <main>
+            <nav class="category-nav active" id="category-nav">
+                <ul>
+                    <li><a href="#" onclick="fetchProducts('electronics')">Electronics</a></li>
+                    <li><a href="#" onclick="fetchProducts('men\'s clothing')">Men's Clothing</a></li>
+                    <li><a href="#" onclick="fetchProducts('women\'s clothing')">Woman's clothing</a></li>
+                    <li><a href="#" onclick="fetchProducts('jewelery')">Jewelry</a></li>
+                </ul>
+            </nav>
+            <div class="grid-container">
+                <!-- Products will be dynamically generated here -->
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2023 - [webshopName]</p>
+    </footer>
+    <script src="category_nav.js"></script>
+    <script src="fetch_products.js"></script>
+    <script src="fetchAll_products.js"></script>
+</body>
+
+</html>
